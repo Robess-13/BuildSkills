@@ -1,0 +1,28 @@
+{
+	"name": "MySSIS",
+	"properties": {
+		"type": "Managed",
+		"description": "SSIS for Build Skills-DF",
+		"typeProperties": {
+			"computeProperties": {
+				"location": "East US",
+				"nodeSize": "Standard_D8_v3",
+				"numberOfNodes": 2,
+				"maxParallelExecutionsPerNode": 8
+			},
+			"ssisProperties": {
+				"catalogInfo": {
+					"catalogServerEndpoint": "buildskillsserver.database.windows.net",
+					"catalogAdminUserName": "azurerb",
+					"catalogAdminPassword": {
+						"type": "SecureString",
+						"value": "**********"
+					},
+					"catalogPricingTier": "S1"
+				},
+				"edition": "Standard",
+				"licenseType": "LicenseIncluded"
+			}
+		}
+	}
+}
